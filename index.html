@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<style>
+    body {
+      font-family: Noto Sans JP, sans-serif;
+      background-color: rgb(204, 204, 204);
+      
+    }
+    h1 {
+        font-family: Noto Sans JP, sans-serif;
+        color:aliceblue;
+        background-color: black;
+        border: 10px black solid;
+        text-align: center;
+        margin:auto;
+        padding: 10px;
+        font-size: 50px;
+        font-weight: bold;
+        width: 99%;
+    }
+    /*h1 {
+      font-family: Noto Sans JP, sans-serif;
+      font-weight: bold;
+    }*/
+    
+    h2 {
+      font-family: Noto Sans JP, sans-serif;
+      font-weight: bold;
+    }
+    h3 {
+      font-family: Noto Sans JP, sans-serif;
+      font-weight: bold;
+    }
+    h4 {
+      font-family: Noto Sans JP, sans-serif;
+      font-weight: bold;
+    }
+    
+    p {
+      font-family: Noto Sans JP, sans-serif;
+      font-weight: bold;
+    }
+    label {
+      font-family: Noto Sans JP, sans-serif;
+      font-weight: bold;
+    }
+    
+    </style>
+
+
+<html>
+
+
+<head>
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <meta>
+
+</head>
+<body class="body" id="doggie">
+<div id="title" class="title">
+<h1>Is My Dog Cute?</h1>
+</div>
+<div id="doublecheck">
+<h2>Do you really have to ask?</h2>
+</div>
+<div id="ramble">
+<h3>I guess you must, or you would be busy petting your cute dog, right?</h3>
+</div>
+<div id="preface-question">
+<h4>Okay, I am going to need some information:</h4>
+  <p class="question">Do you have a dog?</p>
+<div id="checkbox">
+  <label for="have-dog-question"><input class="no" id="have-dog-question" type="checkbox" name="no-ownership">No</label>
+  <label for="have-dog-question"><input class="yes" id="have-dog-question" type="checkbox" name="yes-ownership" <!--checked-->Yes</label>
+</div>
+</div>
+
+
+
+
+</body>
+<script>
+    $(document).ready(function(){
+        $('input:checkbox').click(function() {
+        $('input:checkbox').not(this).prop('checked', false);
+    });  
+        
+        $(".yes").click(function(){
+            alert("Your dog is cute.");
+            });
+        $(".no").click(function(){
+            alert("Your hypothetical and/or potential dog is cute.");
+    });
+
+
+    });
+
+</script>
+
+
+</html>
